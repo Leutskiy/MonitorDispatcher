@@ -1,0 +1,11 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\bin\Release\MessageWindow.exe.config
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\bin\Release\MessageWindow.exe
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\bin\Release\MessageWindow.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\bin\Release\CommonTypes.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\bin\Release\CommonTypes.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\obj\Release\MessageWindow.csprojResolveAssemblyReference.cache
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\obj\Release\MessageWindow.MessageWindowForm.resources
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\obj\Release\MessageWindow.Properties.Resources.resources
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\obj\Release\MessageWindow.csproj.GenerateResource.Cache
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\obj\Release\MessageWindow.exe
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MessageWindow\obj\Release\MessageWindow.pdb

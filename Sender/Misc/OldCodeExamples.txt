@@ -1,0 +1,59 @@
+﻿            //Add data rows.
+            //lstviewMusic.AddRow("Track0", "", "");
+            //lstviewMusic.AddRow("Track1", "", "");
+            //lstviewMusic.AddRow("Track2", "", "");
+            //lstviewMusic.AddRow("Track4", "", "");
+            //lstviewMusic.AddRow("Track5", "", "");
+            //lstviewMusic.AddRow("Track6", "", "");
+            //lstviewMusic.AddRow("Track7", "", "");
+
+            /*
+            //lstviewMusic
+            lstviewMusic = new EXListView();
+            lstviewMusic.MyHighlightBrush = Brushes.Green;
+            lstviewMusic.GridLines = false;
+
+            lstviewMusic.LockColumnSize = true;
+            lstviewMusic.AllowColumnReorder = false;
+
+            lstviewMusic.Location = new Point(7, 45);
+            lstviewMusic.Size = new Size(314, 282); //282
+            lstviewMusic.Font = new Font("Times New Roman", 12);
+            lstviewMusic.ControlPadding = 5;
+            lstviewMusic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+
+            lstviewMusic.SmallImageList = imageListMusicIcons;
+            lstviewMusic.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+
+            //add columns and items
+            lstviewMusic.Columns.Add(new EXColumnHeader("Track Name", 233));
+            lstviewMusic.Columns.Add( new EXColumnHeader("", 30));
+            lstviewMusic.Columns.Add(new EXColumnHeader("", 30)); 
+
+            lstviewMusic.MultiSelect = true;
+
+            lstviewMusic.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.None);
+            lstviewMusic.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.None);
+            lstviewMusic.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.None);
+            lstviewMusic.Columns[2].TextAlign = HorizontalAlignment.Left;
+
+            lstviewMusic.BeginUpdate();
+            for (int i = 0; i < 100; i++)
+            {
+                // Track Play
+                EXImageListViewSubItem subitemTrackPlay = new EXImageListViewSubItem();
+                subitemTrackPlay.MyImage = lstviewMusic.SmallImageList.Images[1];
+
+                // Track Delete
+                EXImageListViewSubItem subitemTrackDelete = new EXImageListViewSubItem();
+                subitemTrackDelete.MyImage =  lstviewMusic.SmallImageList.Images[2];
+
+                // Track Name
+                EXListViewItem itemTrackName = new EXListViewItem("Track" + (i + 1).ToString());
+
+                itemTrackName.SubItems.Add(subitemTrackPlay);
+                itemTrackName.SubItems.Add(subitemTrackDelete);
+                lstviewMusic.Items.Add(itemTrackName);
+            }
+            lstviewMusic.EndUpdate();
+             */

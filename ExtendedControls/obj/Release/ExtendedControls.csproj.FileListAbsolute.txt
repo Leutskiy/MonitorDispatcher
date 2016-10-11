@@ -1,0 +1,4 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\bin\Release\ExtendedControls.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\bin\Release\ExtendedControls.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\obj\Release\ExtendedControls.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\obj\Release\ExtendedControls.pdb

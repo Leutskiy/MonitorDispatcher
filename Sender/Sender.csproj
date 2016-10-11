@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FAA0AB0-142E-4BF0-84F3-DB3634575625}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sender</RootNamespace>
+    <AssemblyName>Sender</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Icons\sender_ico_256x256px.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExtControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtControlLibrary\ExtControlLibrary\bin\Debug\ExtControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Playlist.cs" />
+    <Compile Include="Entities\PlaylistState.cs" />
+    <Compile Include="Entities\PlaylistTrackStates.cs" />
+    <Compile Include="Entities\Track.cs" />
+    <Compile Include="EventArguments\BackgroundImageEventArgs.cs" />
+    <Compile Include="EXControls\AddButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\DeleteButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\EXComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\EXListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\ImageListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\ListViewEx.cs" />
+    <Compile Include="EXControls\ListViewExtensions.cs" />
+    <Compile Include="EXControls\MediaPlayerListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\MessageListBoxItemEx.cs" />
+    <Compile Include="EXControls\Player.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\PlayPauseButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\StorageMessageListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXControls\VideoPlayerListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extensions\GenericListExtensions.cs" />
+    <Compile Include="Extensions\ListViewExtensions.cs" />
+    <Compile Include="Extensions\PictureBoxExtensions.cs" />
+    <Compile Include="Helpers\FileManager.cs" />
+    <Compile Include="Helpers\SerializeManager.cs" />
+    <Compile Include="Model\LocalMonitorManager.cs" />
+    <Compile Include="Model\RemoteConnectionManager.cs" />
+    <Compile Include="Presenter\SenderPresenter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PreviewImageInPictureBox.cs" />
+    <Compile Include="Services\ValidationService.cs" />
+    <Compile Include="View\SenderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SenderView.Designer.cs">
+      <DependentUpon>SenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32\Win32.cs" />
+    <EmbeddedResource Include="View\SenderView.resx">
+      <DependentUpon>SenderView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Icons\sender_ico_256x256px.ico" />
+    <EmbeddedResource Include="Images\Icons\sender_png_512x512px.png" />
+    <Content Include="Misc\05_06_2016 - advanced work.txt" />
+    <Content Include="Misc\CreateAbstractFactureForDifferentPlayers.txt" />
+    <Content Include="Misc\ThreadsAndEventHandlers.txt" />
+    <None Include="Resources\non_photo_80x80px_01.png" />
+    <EmbeddedResource Include="Images\arrow-blue-up_44x44px_01.png" />
+    <EmbeddedResource Include="Images\arrow-blue-down_44x44px_01.png" />
+    <EmbeddedResource Include="Images\add_green_44x44px_01.png" />
+    <EmbeddedResource Include="Images\non_photo_64x64px_01.bmp" />
+    <EmbeddedResource Include="Images\reset_gray_25x25_01.png" />
+    <EmbeddedResource Include="Images\tiner_gray_28x28px.png" />
+    <EmbeddedResource Include="Images\start_timer_black_28x28px.png" />
+    <EmbeddedResource Include="Images\restart_black_28x28px.png" />
+    <EmbeddedResource Include="Images\add_plus_64x64px.ico" />
+    <EmbeddedResource Include="Images\remove_minus_64x64px.ico" />
+    <EmbeddedResource Include="Images\pause_black_28x28px.png" />
+    <EmbeddedResource Include="Images\play_black_28x28px.png" />
+    <EmbeddedResource Include="Images\control_pause_35x35px.png" />
+    <EmbeddedResource Include="Images\green_add_22x22px.png" />
+    <EmbeddedResource Include="Images\red_x_white_close_22x22px.png" />
+    <EmbeddedResource Include="Images\back_arrow_geen_128x128px.png" />
+    <Content Include="Misc\About Controls.txt" />
+    <Content Include="Misc\Intresting code.txt" />
+    <Content Include="Misc\OldCodeExamples.txt" />
+    <Content Include="Misc\Remaining Work.txt" />
+    <Content Include="Misc\Snippets. Examples.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonTypes\CommonTypes.csproj">
+      <Project>{67b95af7-c8ef-4ae8-8d08-287ae1115bf4}</Project>
+      <Name>CommonTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpfulMethods\HelpfulMethods.csproj">
+      <Project>{33a0c632-3f73-4a78-9de7-e3dfb3db4183}</Project>
+      <Name>HelpfulMethods</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MediaDataSerialization\MediaDataSerialization.csproj">
+      <Project>{9a943c64-24d6-4897-9649-dfc5a3c18693}</Project>
+      <Name>MediaDataSerialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reciever\Reciever.csproj">
+      <Project>{ff4987c7-8b89-4c7c-b76b-0034ea098028}</Project>
+      <Name>Reciever</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

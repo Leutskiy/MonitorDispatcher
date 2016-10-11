@@ -1,0 +1,10 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\bin\Debug\CommonTypes.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\bin\Debug\CommonTypes.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\bin\Debug\CommonTypes.dll
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\bin\Debug\CommonTypes.pdb
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.dll
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.pdb

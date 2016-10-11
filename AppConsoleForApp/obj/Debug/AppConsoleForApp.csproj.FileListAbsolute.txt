@@ -1,0 +1,12 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe.config
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.exe
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe.config
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.exe
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.pdb
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.pdb
+C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.csprojResolveAssemblyReference.cache

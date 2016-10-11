@@ -1,0 +1,5 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\bin\Debug\ExtendedControls.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\bin\Debug\ExtendedControls.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\obj\Debug\ExtendedControls.csprojResolveAssemblyReference.cache
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\obj\Debug\ExtendedControls.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\ExtendedControls\obj\Debug\ExtendedControls.pdb

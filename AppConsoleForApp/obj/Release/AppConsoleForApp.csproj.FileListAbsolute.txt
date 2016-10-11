@@ -1,0 +1,5 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\bin\Release\AppConsoleForApp.exe.config
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\bin\Release\AppConsoleForApp.exe
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\bin\Release\AppConsoleForApp.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\obj\Release\AppConsoleForApp.exe
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\AppConsoleForApp\obj\Release\AppConsoleForApp.pdb

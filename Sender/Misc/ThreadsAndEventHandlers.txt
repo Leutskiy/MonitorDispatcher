@@ -1,0 +1,39 @@
+﻿            //if (NewState == (int)WMPPlayState.wmppsStopped)
+            //{
+            //    var playableMusicTrackNumber = lstviewMusic.Playlist.PlayableTrackNumber;
+            //    butPlayPauseMusicFile_Click(lstviewMusic.GetEmbeddedControl(1, (++playableMusicTrackNumber) % lstviewMusic.Playlist.TracksCount), new EventArgs());
+            //
+            //}
+
+            //if (NewState == (int)WMPPlayState.wmppsMediaEnded)
+            //{
+            //    if (this.InvokeRequired)
+            //    {
+            //        Action act = delegate()
+            //        {
+            //            senderPlayerMusic.URL = lstviewMusic.Playlist.Tracks[1].FullPath;
+            //        };
+
+            //        this.Invoke(act);
+            //    }  
+
+                //var playableMusicTrackNumber = (++lstviewMusic.Playlist.PlayableTrackNumber)  % lstviewMusic.Playlist.TracksCount;
+                //senderPlayerMusic.controls.stop();
+                //senderPlayerMusic.close();
+                //senderPlayerMusic.URL = lstviewMusic.Playlist.Tracks[1].FullPath;
+                //MessageBox.Show(senderPlayerMusic.status.ToString());
+                //MessageBox.Show(senderPlayerMusic.playState.ToString());
+
+                //senderPlayerMusic.controls.play();
+
+                //var playableMusicTrackNumber = lstviewMusic.Playlist.PlayableTrackNumber;
+                //if (this.InvokeRequired)
+                //{
+                //    Action act = delegate()
+                //    {
+                //        butPlayPauseMusicFile_Click(lstviewMusic.GetEmbeddedControl(1, (++playableMusicTrackNumber) % lstviewMusic.Playlist.TracksCount), new EventArgs());
+                //    };
+
+                //    this.Invoke(act);
+                //}               
+            //}

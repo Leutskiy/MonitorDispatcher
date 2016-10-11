@@ -1,0 +1,25 @@
+﻿/*  That code shows creating the TextBox control with rounded corners */
+
+var widthTxtBoxMonitorFullScreen = txtboxMonitorFullScreen.Width;
+var heightTxtBoxMonitorFullScreen = txtboxMonitorFullScreen.Height;
+
+txtboxMonitorFullScreen.Text = @"Monitor full-screen";
+txtboxMonitorFullScreen.TextAlign = HorizontalAlignment.Center;
+
+IntPtr ptrBorder = Win32API.CreateRoundRectRgn(0, 0, widthTxtBoxMonitorFullScreen, heightTxtBoxMonitorFullScreen, 10, 10);
+try
+{
+    var txtboxRectangle = Region.FromHrgn(ptrBorder);
+    txtboxMonitorFullScreen.Region = txtboxRectangle;
+}
+finally
+{
+    ControlPaint.DrawBorder(
+                    txtboxMonitorFullScreen.CreateGraphics(), 
+                    txtboxMonitorFullScreen.ClientRectangle, 
+                    Color.Blue, 
+                    ButtonBorderStyle.Solid);
+
+    ControlPaint.DrawBorder(txtboxMonitorFullScreen.CreateGraphics(), txtboxMonitorFullScreen.DisplayRectangle, Color.Black, ButtonBorderStyle.Solid);
+    Win32API.DeleteObject(ptrBorder); 
+}

@@ -1,0 +1,37 @@
+﻿Событие DrawSubItem вызывается для каждого подэлемента каждой строки ListView в представлении Details
+Стоит отметить, что сам элемент (item) является подэлементом, родительским для которого является он сам.
+private void this_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+{
+	...
+	Something code
+	...
+
+	// Подэлемент-элемент
+	if (e.ColumnIndex == 0)
+	{
+		// Draw an item by only owner 
+		e.DrawDefault = false;
+
+		int font_y = e.Item.Bounds.Y + ((int)(e.Item.Bounds.Height / 2)) - ((int)(e.Item.Font.Height / 2));
+		int bound_x = e.Item.Bounds.X + 2;
+		e.Graphics.DrawString(" " + e.SubItem.Text, e.Item.Font, new SolidBrush(Color.Black), bound_x, font_y);
+
+		/*
+		Стоит отметить, что здесь можно вместо подэлемента-элемента вызывать родительский элемент, то есть ...Item.Text
+		*/
+	}
+	// Подэлемент 1
+	if (e.ColumnIndex == 1)
+	{
+		int font_y = e.Item.Bounds.Y + ((int)(e.Item.Bounds.Height / 2)) - ((int)(e.Item.Font.Height / 2));
+		int bound_x = e.Item.Bounds.X + 2;
+		//e.Graphics.DrawString(" " + e.SubItem.Text, e.Item.Font, new SolidBrush(Color.Black), bound_x, font_y);
+	}
+	// Подэлемент 2
+	if (e.ColumnIndex == 2)
+	{
+		int font_y = e.Item.Bounds.Y + ((int)(e.Item.Bounds.Height / 2)) - ((int)(e.Item.Font.Height / 2));
+		int bound_x = e.Item.Bounds.X + 2;
+		//e.Graphics.DrawString(" " + e.SubItem.Text, e.Item.Font, new SolidBrush(Color.Black), bound_x, font_y);
+	}
+}

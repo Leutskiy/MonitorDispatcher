@@ -1,0 +1,5 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\TimeDataSerialization\bin\Debug\TimeDataSerialization.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\TimeDataSerialization\bin\Debug\TimeDataSerialization.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\TimeDataSerialization\obj\Debug\TimeDataSerialization.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\TimeDataSerialization\obj\Debug\TimeDataSerialization.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\TimeDataSerialization\obj\Debug\TimeDataSerialization.csprojResolveAssemblyReference.cache

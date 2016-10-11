@@ -1,0 +1,7 @@
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\bin\Release\MediaDataSerialization.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\bin\Release\MediaDataSerialization.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\bin\Release\CommonTypes.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\bin\Release\CommonTypes.pdb
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\obj\Release\MediaDataSerialization.csprojResolveAssemblyReference.cache
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\obj\Release\MediaDataSerialization.dll
+C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\MediaDataSerialization\obj\Release\MediaDataSerialization.pdb
