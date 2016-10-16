@@ -20,3 +20,14 @@ C:\Users\Администратор\Documents\Visual Studio 2015\Projects\Monito
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.csproj.GenerateResource.Cache
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.exe
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.pdb
+C:\Workspaces\MonitorDispatcher\MessageWindow\bin\Debug\MessageWindow.exe.config
+C:\Workspaces\MonitorDispatcher\MessageWindow\bin\Debug\MessageWindow.exe
+C:\Workspaces\MonitorDispatcher\MessageWindow\bin\Debug\MessageWindow.pdb
+C:\Workspaces\MonitorDispatcher\MessageWindow\bin\Debug\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\MessageWindow\bin\Debug\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.csprojResolveAssemblyReference.cache
+C:\Workspaces\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.MessageWindowForm.resources
+C:\Workspaces\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.Properties.Resources.resources
+C:\Workspaces\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.csproj.GenerateResource.Cache
+C:\Workspaces\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.exe
+C:\Workspaces\MonitorDispatcher\MessageWindow\obj\Debug\MessageWindow.pdb

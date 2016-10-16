@@ -50,8 +50,9 @@
     <ApplicationIcon>Images\Icons\receiver_ico_256x256px.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExtControlLibrary">
-      <HintPath>..\..\ExtControlLibrary\ExtControlLibrary\bin\Debug\ExtControlLibrary.dll</HintPath>
+    <Reference Include="ExtControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Администратор\Documents\Visual Studio 2015\Projects\ExtControlLibrary\ExtControlLibrary\bin\Debug\ExtControlLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

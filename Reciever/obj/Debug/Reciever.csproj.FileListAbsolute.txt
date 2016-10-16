@@ -45,3 +45,27 @@ C:\Users\Администратор\Documents\Visual Studio 2015\Projects\Monito
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\Reciever\obj\Debug\Reciever.csproj.GenerateResource.Cache
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\Reciever\obj\Debug\Reciever.exe
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\Reciever\obj\Debug\Reciever.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\Reciever.exe.config
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.csproj.ResolveComReference.cache
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.exe
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\Reciever.exe
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\Reciever.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\MediaDataSerialization.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\MessageWindow.exe
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\MediaDataSerialization.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\MessageWindow.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\ExtControlLibrary.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.csprojResolveAssemblyReference.cache
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.RecieverView.resources
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.Properties.Resources.resources
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Debug\Reciever.csproj.GenerateResource.Cache
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Debug\ExtControlLibrary.dll

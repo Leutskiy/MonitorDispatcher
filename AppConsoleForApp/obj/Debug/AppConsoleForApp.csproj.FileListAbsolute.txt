@@ -10,3 +10,8 @@ C:\Users\Администратор\Documents\Visual Studio 2015\Projects\Monito
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.pdb
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.csprojResolveAssemblyReference.cache
+C:\Workspaces\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe.config
+C:\Workspaces\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.exe
+C:\Workspaces\MonitorDispatcher\AppConsoleForApp\bin\Debug\AppConsoleForApp.pdb
+C:\Workspaces\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.exe
+C:\Workspaces\MonitorDispatcher\AppConsoleForApp\obj\Debug\AppConsoleForApp.pdb

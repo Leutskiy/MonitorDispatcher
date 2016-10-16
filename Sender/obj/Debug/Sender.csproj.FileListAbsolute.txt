@@ -50,3 +50,28 @@ C:\Users\Администратор\Documents\Visual Studio 2015\Projects\Monito
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\Sender\obj\Debug\Sender.View.ViewSender.resources
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\Sender\obj\Debug\Sender.Properties.Resources.resources
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\Sender\obj\Debug\Sender.csproj.GenerateResource.Cache
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\Sender.exe.config
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.csproj.ResolveComReference.cache
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.exe
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\Sender.exe
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\Sender.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\MediaDataSerialization.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\Reciever.exe
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\System.Windows.Controls.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\MessageWindow.exe
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\MediaDataSerialization.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\Reciever.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\MessageWindow.pdb
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.csprojResolveAssemblyReference.cache
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.View.ViewSender.resources
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.Properties.Resources.resources
+C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.csproj.GenerateResource.Cache

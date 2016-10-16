@@ -8,3 +8,7 @@ C:\Users\Администратор\Documents\Visual Studio 2015\Projects\Monito
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.csprojResolveAssemblyReference.cache
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.dll
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\CommonTypes\bin\Debug\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\CommonTypes\bin\Debug\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\CommonTypes\obj\Debug\CommonTypes.pdb

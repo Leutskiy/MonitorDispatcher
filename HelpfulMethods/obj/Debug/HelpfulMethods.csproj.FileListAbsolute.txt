@@ -8,3 +8,7 @@ C:\Users\Администратор\Documents\Visual Studio 2015\Projects\Monito
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\HelpfulMethods\obj\Debug\HelpfulMethods.csprojResolveAssemblyReference.cache
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\HelpfulMethods\obj\Debug\HelpfulMethods.dll
 C:\Users\Администратор\Documents\Visual Studio 2015\Projects\MonitorDispatcher\HelpfulMethods\obj\Debug\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\bin\Debug\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\bin\Debug\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\obj\Debug\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\obj\Debug\HelpfulMethods.pdb

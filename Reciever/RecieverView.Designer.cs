@@ -35,8 +35,8 @@
             this.fullScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.standartScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerReciever = new System.Windows.Forms.Timer(this.components);
-            this.simpleTimerReciver = new ExtControlLibrary.SimpleTimer();
             this.axWMPOnlyVideo = new AxWMPLib.AxWindowsMediaPlayer();
+            this.simpleTimerReciver = new ExtControlLibrary.TimerWithDigitalLabels();
             ((System.ComponentModel.ISupportInitialize)(this.picboxRecievedImage)).BeginInit();
             this.cntxtMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWMPOnlyVideo)).BeginInit();
@@ -84,16 +84,6 @@
             this.timerReciever.Interval = 1000;
             this.timerReciever.Tick += new System.EventHandler(this.timerReciever_Tick);
             // 
-            // simpleTimerReciver
-            // 
-            this.simpleTimerReciver.AutoSize = true;
-            this.simpleTimerReciver.DeltaX = 0;
-            this.simpleTimerReciver.DeltaY = 0;
-            this.simpleTimerReciver.Location = new System.Drawing.Point(308, 12);
-            this.simpleTimerReciver.Name = "simpleTimerReciver";
-            this.simpleTimerReciver.Size = new System.Drawing.Size(543, 119);
-            this.simpleTimerReciver.TabIndex = 3;
-            // 
             // axWMPOnlyVideo
             // 
             this.axWMPOnlyVideo.Enabled = true;
@@ -105,6 +95,17 @@
             this.axWMPOnlyVideo.Visible = false;
             this.axWMPOnlyVideo.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWMPOnlyVideo_PlayStateChange);
             // 
+            // simpleTimerReciver
+            // 
+            this.simpleTimerReciver.BackColorDigitTimer = System.Drawing.Color.Black;
+            this.simpleTimerReciver.DeltaX = 0;
+            this.simpleTimerReciver.DeltaY = 0;
+            this.simpleTimerReciver.FontTimer = new System.Drawing.Font("Arial", 48F);
+            this.simpleTimerReciver.Location = new System.Drawing.Point(248, 12);
+            this.simpleTimerReciver.Name = "simpleTimerReciver";
+            this.simpleTimerReciver.Size = new System.Drawing.Size(646, 143);
+            this.simpleTimerReciver.TabIndex = 5;
+            // 
             // RecieverView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,8 +113,8 @@
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1185, 681);
             this.ContextMenuStrip = this.cntxtMenuStrip;
-            this.Controls.Add(this.axWMPOnlyVideo);
             this.Controls.Add(this.simpleTimerReciver);
+            this.Controls.Add(this.axWMPOnlyVideo);
             this.Controls.Add(this.picboxRecievedImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -129,7 +130,6 @@
             this.cntxtMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWMPOnlyVideo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -140,8 +140,8 @@
         private System.Windows.Forms.ToolStripMenuItem fullScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem standartScreenToolStripMenuItem;
         private System.Windows.Forms.Timer timerReciever;
-        private ExtControlLibrary.SimpleTimer simpleTimerReciver;
         private AxWMPLib.AxWindowsMediaPlayer axWMPOnlyVideo;
+        private ExtControlLibrary.TimerWithDigitalLabels simpleTimerReciver;
     }
 }
 

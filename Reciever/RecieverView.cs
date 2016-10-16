@@ -102,7 +102,7 @@ namespace Reciever
             // TODO: Переделать более корректно! Учесть исключения
             var timer = this.Controls.Find("simpleTimerReciver", false).FirstOrDefault();
 
-            _deltaTimerHeight = timer != null ? (timer as SimpleTimer).Height : 0;
+            _deltaTimerHeight = timer != null ? (timer as TimerWithDigitalLabels).Height : 0;
 
             simpleTimerReciver.Location = new Point(this.Width/2 - simpleTimerReciver.Width/2);
 
