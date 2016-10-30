@@ -2,3 +2,7 @@ C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\bin\Release\CommonTypes.pdb
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\obj\Release\CommonTypes.dll
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\CommonTypes\obj\Release\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\CommonTypes\bin\Release\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\CommonTypes\bin\Release\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\CommonTypes\obj\Release\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\CommonTypes\obj\Release\CommonTypes.pdb

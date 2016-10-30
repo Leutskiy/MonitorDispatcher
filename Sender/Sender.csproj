@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="ExtControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ExtControlLibrary\ExtControlLibrary\bin\Debug\ExtControlLibrary.dll</HintPath>
+      <HintPath>..\..\..\Users\Администратор\Documents\Visual Studio 2015\Projects\ExtControlLibrary\ExtControlLibrary\bin\Debug\ExtControlLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

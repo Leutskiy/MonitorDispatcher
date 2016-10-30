@@ -22,3 +22,27 @@ C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\Reciever\bin\Release\HelpfulMethods.dll
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\Reciever\bin\Release\HelpfulMethods.pdb
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\Reciever\bin\Release\ExtControlLibrary.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\Reciever.exe.config
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\Reciever.exe
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\Reciever.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\ExtControlLibrary.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\MediaDataSerialization.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\MessageWindow.exe
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\MediaDataSerialization.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\MessageWindow.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\ExtControlLibrary.pdb
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\bin\Release\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.csprojResolveAssemblyReference.cache
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.csproj.ResolveComReference.cache
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.RecieverView.resources
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.Properties.Resources.resources
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.csproj.GenerateResource.Cache
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.exe
+C:\Workspaces\MonitorDispatcher\Reciever\obj\Release\Reciever.pdb

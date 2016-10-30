@@ -22,13 +22,21 @@ namespace CommonTypes
     [Serializable]
     public class Settings
     {
+        #region Text Settings
+
         public string    FontFamilyText           { get; set; }
 
         public int       SizeText                 { get; set; }
 
         public TypeText  TextStyle                { get; set; }
 
+        public string    ForeColorText            { get; set; }
+
         public DateTime  StartTimer               { get; set; }
+
+        #endregion
+
+        #region Connection Settings
 
         public ushort    RemoteConnectionPort     { get; set; }
 
@@ -36,48 +44,102 @@ namespace CommonTypes
 
         public IPAddress IpAddressRemoteMachine   { get; set; }
 
-        public string     ForeColorText           { get; set; }
+        #endregion
+
+        #region Timer Settings
+
+        /// <summary>
+        /// Шрифт цифр таймера
+        /// </summary>
+        public string FontFamilyTimer { get; set; }
+
+        /// <summary>
+        /// Размер цифр таймера
+        /// </summary>
+        public int    SizeTimer       { get; set; }
+
+        /// <summary>
+        /// Фон цифр таймера
+        /// </summary>
+        public string BackColorTimer  { get; set; }
+
+        /// <summary>
+        /// Цвет цифр таймера
+        /// </summary>
+        public string ForeColorTimer  { get; set; }
+
+        #endregion
 
         private static readonly string    _fontFamilyText;
         private static readonly int       _sizeText;
         private static readonly TypeText  _textStyle;
-        private static readonly DateTime  _startTimer;
+        public  static readonly string    _foreColorText;
+        
         private static readonly ushort    _portRemoteConnection;
         private static readonly ushort    _portChromecastConnection;
         private static readonly IPAddress _ipAddressRemoteMachine;
-        public  static readonly string     _foreColorText;
+
+        private static readonly DateTime  _startTimer;
+        private static readonly string    _fontFamilyTimer;
+        private static readonly int       _sizeTimer;
+        public  static readonly string    _backColorTimer;
+        public  static readonly string    _foreColorTimer;
 
         static Settings()
         {
             _fontFamilyText           = @"Times New Roman";
             _sizeText                 = 24;
             _textStyle                = TypeText.None;
-            _startTimer               = new DateTime(2000, 1, 1, 0, 0, 0, 0);
+            _foreColorText            = "Black";
+            
             _portRemoteConnection     = 12000;
             _portChromecastConnection = 8008;
             _ipAddressRemoteMachine   = IPAddress.Parse("127.0.0.1");
-            _foreColorText            = "Black";
+            
+            _startTimer               = new DateTime(2000, 1, 1, 0, 0, 0, 0);
+            _fontFamilyTimer          = @"Arial";
+            _sizeTimer                = 48;
+            _backColorTimer           = "Black";
+            _foreColorTimer           = "White";
         }
 
         public Settings()
         {
-            SetValuesByDefault();
+            SetTextValuesByDefault();
+            SetConnectionValuesByDefault();
+            SetTimerValuesByDefault();
         }
 
-        public void SetValuesByDefault()
+        public void SetTextValuesByDefault()
         {
-            FontFamilyText           = _fontFamilyText;
-            SizeText                 = _sizeText;
-            TextStyle                = _textStyle;
-            StartTimer               = _startTimer;
+            FontFamilyText = _fontFamilyText;
+            SizeText       = _sizeText;
+            TextStyle      = _textStyle;
+            ForeColorText  = _foreColorText;
+
+           
+        }
+
+        public void SetConnectionValuesByDefault()
+        {
             RemoteConnectionPort     = _portRemoteConnection;
             ChromecastConnectionPort = _portChromecastConnection;
             IpAddressRemoteMachine   = _ipAddressRemoteMachine;
-            ForeColorText            = _foreColorText;
+
+        }
+
+        public void SetTimerValuesByDefault()
+        {
+            StartTimer      = _startTimer;
+            FontFamilyTimer = _fontFamilyTimer;
+            SizeTimer       = _sizeTimer;
+            BackColorTimer  = _backColorTimer;
+            ForeColorTimer  = _foreColorTimer;
         }
 
         public static Settings DeserializeSettings(string pathSerializableDatFileWithSettings)
         {
+            // todo: ответить на вопрос, загружается ли файл вместе с объектом потока в память или только хэндл на файл?
             using (Stream fs = new FileStream(pathSerializableDatFileWithSettings, FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 if (fs.Length == 0)
@@ -115,6 +177,11 @@ namespace CommonTypes
         public Font GetFontForMessage()
         {
             return new Font(FontFamilyText, SizeText, GetStyleTextByTypeText(TextStyle));
+        }
+
+        public Font GetFontForTimer()
+        {
+            return new Font(FontFamilyTimer, SizeTimer, FontStyle.Regular);
         }
     }
 }

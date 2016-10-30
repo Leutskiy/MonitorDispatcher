@@ -55,9 +55,23 @@
             this.grBoxSavedMessages = new System.Windows.Forms.GroupBox();
             this.lblVerticalLineMessage = new System.Windows.Forms.Label();
             this.butDeleteMessage = new System.Windows.Forms.Button();
+            this.tabTimer = new System.Windows.Forms.TabPage();
+            this.grBox = new System.Windows.Forms.GroupBox();
+            this.butResetTimerSettings = new System.Windows.Forms.Button();
+            this.butAcceptTimerSettings = new System.Windows.Forms.Button();
+            this.cmbBoxListForeColorTimer = new System.Windows.Forms.ComboBox();
+            this.cmbBoxListBackColorTimer = new System.Windows.Forms.ComboBox();
+            this.numUpDownTimerSize = new System.Windows.Forms.NumericUpDown();
+            this.cmbBoxTimerFont = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerStartTimeByDefault = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labDigitColor = new System.Windows.Forms.Label();
+            this.labDigitSize = new System.Windows.Forms.Label();
+            this.labDigitFont = new System.Windows.Forms.Label();
+            this.labStartTimeDefault = new System.Windows.Forms.Label();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.grBoxOther = new System.Windows.Forms.GroupBox();
+            this.grBoxConnection = new System.Windows.Forms.GroupBox();
             this.txtboxIpAddressRemoteConnByDefault = new System.Windows.Forms.TextBox();
             this.lblLastIpAddress = new System.Windows.Forms.Label();
             this.butResetOtherSettings = new System.Windows.Forms.Button();
@@ -66,8 +80,6 @@
             this.butAcceptOtherSettings = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labStartTimeDefault = new System.Windows.Forms.Label();
-            this.dateTimePickerStartTimeByDefault = new System.Windows.Forms.DateTimePicker();
             this.grBoxTextSettings = new System.Windows.Forms.GroupBox();
             this.cmbBoxListColors = new System.Windows.Forms.ComboBox();
             this.lblTextColor = new System.Windows.Forms.Label();
@@ -132,8 +144,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxBgImagePreview)).BeginInit();
             this.tabMessages.SuspendLayout();
             this.grBoxSavedMessages.SuspendLayout();
+            this.tabTimer.SuspendLayout();
+            this.grBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownTimerSize)).BeginInit();
             this.tabSettings.SuspendLayout();
-            this.grBoxOther.SuspendLayout();
+            this.grBoxConnection.SuspendLayout();
             this.grBoxTextSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownTextSize)).BeginInit();
             this.grboxTimer.SuspendLayout();
@@ -151,6 +166,7 @@
             this.tabsOther.Controls.Add(this.tabVideo);
             this.tabsOther.Controls.Add(this.tabImages);
             this.tabsOther.Controls.Add(this.tabMessages);
+            this.tabsOther.Controls.Add(this.tabTimer);
             this.tabsOther.Controls.Add(this.tabSettings);
             this.tabsOther.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabsOther.ItemSize = new System.Drawing.Size(80, 30);
@@ -462,10 +478,167 @@
             this.butDeleteMessage.UseVisualStyleBackColor = true;
             this.butDeleteMessage.Click += new System.EventHandler(this.butDeleteMessage_Click);
             // 
+            // tabTimer
+            // 
+            this.tabTimer.Controls.Add(this.grBox);
+            this.tabTimer.Location = new System.Drawing.Point(4, 34);
+            this.tabTimer.Name = "tabTimer";
+            this.tabTimer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTimer.Size = new System.Drawing.Size(814, 372);
+            this.tabTimer.TabIndex = 5;
+            this.tabTimer.Text = "Timer";
+            this.tabTimer.UseVisualStyleBackColor = true;
+            // 
+            // grBox
+            // 
+            this.grBox.Controls.Add(this.butResetTimerSettings);
+            this.grBox.Controls.Add(this.butAcceptTimerSettings);
+            this.grBox.Controls.Add(this.cmbBoxListForeColorTimer);
+            this.grBox.Controls.Add(this.cmbBoxListBackColorTimer);
+            this.grBox.Controls.Add(this.numUpDownTimerSize);
+            this.grBox.Controls.Add(this.cmbBoxTimerFont);
+            this.grBox.Controls.Add(this.dateTimePickerStartTimeByDefault);
+            this.grBox.Controls.Add(this.label4);
+            this.grBox.Controls.Add(this.labDigitColor);
+            this.grBox.Controls.Add(this.labDigitSize);
+            this.grBox.Controls.Add(this.labDigitFont);
+            this.grBox.Controls.Add(this.labStartTimeDefault);
+            this.grBox.Location = new System.Drawing.Point(22, 21);
+            this.grBox.Name = "grBox";
+            this.grBox.Size = new System.Drawing.Size(770, 327);
+            this.grBox.TabIndex = 0;
+            this.grBox.TabStop = false;
+            this.grBox.Text = "Settings";
+            // 
+            // butResetTimerSettings
+            // 
+            this.butResetTimerSettings.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butResetTimerSettings.Location = new System.Drawing.Point(655, 263);
+            this.butResetTimerSettings.Name = "butResetTimerSettings";
+            this.butResetTimerSettings.Size = new System.Drawing.Size(101, 27);
+            this.butResetTimerSettings.TabIndex = 27;
+            this.butResetTimerSettings.Text = "Reset";
+            this.butResetTimerSettings.UseVisualStyleBackColor = true;
+            this.butResetTimerSettings.Click += new System.EventHandler(this.butResetTimerSettings_Click);
+            // 
+            // butAcceptTimerSettings
+            // 
+            this.butAcceptTimerSettings.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butAcceptTimerSettings.Location = new System.Drawing.Point(536, 263);
+            this.butAcceptTimerSettings.Name = "butAcceptTimerSettings";
+            this.butAcceptTimerSettings.Size = new System.Drawing.Size(101, 27);
+            this.butAcceptTimerSettings.TabIndex = 26;
+            this.butAcceptTimerSettings.Text = "Accept";
+            this.butAcceptTimerSettings.UseVisualStyleBackColor = true;
+            this.butAcceptTimerSettings.Click += new System.EventHandler(this.butAcceptTimerSettings_Click);
+            // 
+            // cmbBoxListForeColorTimer
+            // 
+            this.cmbBoxListForeColorTimer.FormattingEnabled = true;
+            this.cmbBoxListForeColorTimer.Location = new System.Drawing.Point(262, 264);
+            this.cmbBoxListForeColorTimer.Name = "cmbBoxListForeColorTimer";
+            this.cmbBoxListForeColorTimer.Size = new System.Drawing.Size(162, 29);
+            this.cmbBoxListForeColorTimer.TabIndex = 25;
+            // 
+            // cmbBoxListBackColorTimer
+            // 
+            this.cmbBoxListBackColorTimer.FormattingEnabled = true;
+            this.cmbBoxListBackColorTimer.Location = new System.Drawing.Point(262, 204);
+            this.cmbBoxListBackColorTimer.Name = "cmbBoxListBackColorTimer";
+            this.cmbBoxListBackColorTimer.Size = new System.Drawing.Size(162, 29);
+            this.cmbBoxListBackColorTimer.TabIndex = 24;
+            // 
+            // numUpDownTimerSize
+            // 
+            this.numUpDownTimerSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numUpDownTimerSize.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numUpDownTimerSize.Location = new System.Drawing.Point(262, 147);
+            this.numUpDownTimerSize.Maximum = new decimal(new int[] {
+            72,
+            0,
+            0,
+            0});
+            this.numUpDownTimerSize.Name = "numUpDownTimerSize";
+            this.numUpDownTimerSize.ReadOnly = true;
+            this.numUpDownTimerSize.Size = new System.Drawing.Size(41, 26);
+            this.numUpDownTimerSize.TabIndex = 15;
+            this.numUpDownTimerSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numUpDownTimerSize.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            // 
+            // cmbBoxTimerFont
+            // 
+            this.cmbBoxTimerFont.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbBoxTimerFont.FormattingEnabled = true;
+            this.cmbBoxTimerFont.Location = new System.Drawing.Point(262, 94);
+            this.cmbBoxTimerFont.Name = "cmbBoxTimerFont";
+            this.cmbBoxTimerFont.Size = new System.Drawing.Size(162, 27);
+            this.cmbBoxTimerFont.TabIndex = 14;
+            // 
+            // dateTimePickerStartTimeByDefault
+            // 
+            this.dateTimePickerStartTimeByDefault.CustomFormat = "HH:mm:ss";
+            this.dateTimePickerStartTimeByDefault.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePickerStartTimeByDefault.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerStartTimeByDefault.Location = new System.Drawing.Point(262, 40);
+            this.dateTimePickerStartTimeByDefault.Name = "dateTimePickerStartTimeByDefault";
+            this.dateTimePickerStartTimeByDefault.ShowUpDown = true;
+            this.dateTimePickerStartTimeByDefault.Size = new System.Drawing.Size(77, 26);
+            this.dateTimePickerStartTimeByDefault.TabIndex = 13;
+            this.dateTimePickerStartTimeByDefault.Value = new System.DateTime(2016, 5, 9, 0, 0, 0, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 21);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Foreground color:";
+            // 
+            // labDigitColor
+            // 
+            this.labDigitColor.AutoSize = true;
+            this.labDigitColor.Location = new System.Drawing.Point(22, 209);
+            this.labDigitColor.Name = "labDigitColor";
+            this.labDigitColor.Size = new System.Drawing.Size(148, 21);
+            this.labDigitColor.TabIndex = 3;
+            this.labDigitColor.Text = "Backgroung color:";
+            // 
+            // labDigitSize
+            // 
+            this.labDigitSize.AutoSize = true;
+            this.labDigitSize.Location = new System.Drawing.Point(22, 152);
+            this.labDigitSize.Name = "labDigitSize";
+            this.labDigitSize.Size = new System.Drawing.Size(41, 21);
+            this.labDigitSize.TabIndex = 2;
+            this.labDigitSize.Text = "Size";
+            // 
+            // labDigitFont
+            // 
+            this.labDigitFont.AutoSize = true;
+            this.labDigitFont.Location = new System.Drawing.Point(22, 97);
+            this.labDigitFont.Name = "labDigitFont";
+            this.labDigitFont.Size = new System.Drawing.Size(49, 21);
+            this.labDigitFont.TabIndex = 1;
+            this.labDigitFont.Text = "Font:";
+            // 
+            // labStartTimeDefault
+            // 
+            this.labStartTimeDefault.AutoSize = true;
+            this.labStartTimeDefault.Location = new System.Drawing.Point(18, 43);
+            this.labStartTimeDefault.Name = "labStartTimeDefault";
+            this.labStartTimeDefault.Size = new System.Drawing.Size(229, 21);
+            this.labStartTimeDefault.TabIndex = 0;
+            this.labStartTimeDefault.Text = "Start position time by default:";
+            // 
             // tabSettings
             // 
             this.tabSettings.Controls.Add(this.label1);
-            this.tabSettings.Controls.Add(this.grBoxOther);
+            this.tabSettings.Controls.Add(this.grBoxConnection);
             this.tabSettings.Controls.Add(this.grBoxTextSettings);
             this.tabSettings.Location = new System.Drawing.Point(4, 34);
             this.tabSettings.Name = "tabSettings";
@@ -487,29 +660,27 @@
             this.label1.Size = new System.Drawing.Size(2, 273);
             this.label1.TabIndex = 8;
             // 
-            // grBoxOther
+            // grBoxConnection
             // 
-            this.grBoxOther.Controls.Add(this.txtboxIpAddressRemoteConnByDefault);
-            this.grBoxOther.Controls.Add(this.lblLastIpAddress);
-            this.grBoxOther.Controls.Add(this.butResetOtherSettings);
-            this.grBoxOther.Controls.Add(this.txtBoxChromecastConnPortByDefault);
-            this.grBoxOther.Controls.Add(this.txtBoxRemoteConnPortByDefault);
-            this.grBoxOther.Controls.Add(this.butAcceptOtherSettings);
-            this.grBoxOther.Controls.Add(this.label3);
-            this.grBoxOther.Controls.Add(this.label2);
-            this.grBoxOther.Controls.Add(this.labStartTimeDefault);
-            this.grBoxOther.Controls.Add(this.dateTimePickerStartTimeByDefault);
-            this.grBoxOther.Location = new System.Drawing.Point(381, 31);
-            this.grBoxOther.Name = "grBoxOther";
-            this.grBoxOther.Size = new System.Drawing.Size(412, 323);
-            this.grBoxOther.TabIndex = 1;
-            this.grBoxOther.TabStop = false;
-            this.grBoxOther.Text = "Other Settings";
+            this.grBoxConnection.Controls.Add(this.txtboxIpAddressRemoteConnByDefault);
+            this.grBoxConnection.Controls.Add(this.lblLastIpAddress);
+            this.grBoxConnection.Controls.Add(this.butResetOtherSettings);
+            this.grBoxConnection.Controls.Add(this.txtBoxChromecastConnPortByDefault);
+            this.grBoxConnection.Controls.Add(this.txtBoxRemoteConnPortByDefault);
+            this.grBoxConnection.Controls.Add(this.butAcceptOtherSettings);
+            this.grBoxConnection.Controls.Add(this.label3);
+            this.grBoxConnection.Controls.Add(this.label2);
+            this.grBoxConnection.Location = new System.Drawing.Point(381, 31);
+            this.grBoxConnection.Name = "grBoxConnection";
+            this.grBoxConnection.Size = new System.Drawing.Size(412, 323);
+            this.grBoxConnection.TabIndex = 1;
+            this.grBoxConnection.TabStop = false;
+            this.grBoxConnection.Text = "Connection Settings";
             // 
             // txtboxIpAddressRemoteConnByDefault
             // 
             this.txtboxIpAddressRemoteConnByDefault.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtboxIpAddressRemoteConnByDefault.Location = new System.Drawing.Point(263, 171);
+            this.txtboxIpAddressRemoteConnByDefault.Location = new System.Drawing.Point(272, 125);
             this.txtboxIpAddressRemoteConnByDefault.MaxLength = 15;
             this.txtboxIpAddressRemoteConnByDefault.Name = "txtboxIpAddressRemoteConnByDefault";
             this.txtboxIpAddressRemoteConnByDefault.Size = new System.Drawing.Size(124, 26);
@@ -518,7 +689,7 @@
             // lblLastIpAddress
             // 
             this.lblLastIpAddress.AutoSize = true;
-            this.lblLastIpAddress.Location = new System.Drawing.Point(6, 175);
+            this.lblLastIpAddress.Location = new System.Drawing.Point(15, 129);
             this.lblLastIpAddress.Name = "lblLastIpAddress";
             this.lblLastIpAddress.Size = new System.Drawing.Size(172, 21);
             this.lblLastIpAddress.TabIndex = 20;
@@ -538,7 +709,7 @@
             // txtBoxChromecastConnPortByDefault
             // 
             this.txtBoxChromecastConnPortByDefault.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxChromecastConnPortByDefault.Location = new System.Drawing.Point(338, 128);
+            this.txtBoxChromecastConnPortByDefault.Location = new System.Drawing.Point(347, 82);
             this.txtBoxChromecastConnPortByDefault.MaxLength = 5;
             this.txtBoxChromecastConnPortByDefault.Name = "txtBoxChromecastConnPortByDefault";
             this.txtBoxChromecastConnPortByDefault.Size = new System.Drawing.Size(50, 26);
@@ -548,7 +719,7 @@
             // txtBoxRemoteConnPortByDefault
             // 
             this.txtBoxRemoteConnPortByDefault.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxRemoteConnPortByDefault.Location = new System.Drawing.Point(338, 84);
+            this.txtBoxRemoteConnPortByDefault.Location = new System.Drawing.Point(347, 38);
             this.txtBoxRemoteConnPortByDefault.MaxLength = 5;
             this.txtBoxRemoteConnPortByDefault.Name = "txtBoxRemoteConnPortByDefault";
             this.txtBoxRemoteConnPortByDefault.Size = new System.Drawing.Size(50, 26);
@@ -564,12 +735,12 @@
             this.butAcceptOtherSettings.TabIndex = 18;
             this.butAcceptOtherSettings.Text = "Accept";
             this.butAcceptOtherSettings.UseVisualStyleBackColor = true;
-            this.butAcceptOtherSettings.Click += new System.EventHandler(this.butAcceptOtherSettings_Click);
+            this.butAcceptOtherSettings.Click += new System.EventHandler(this.butAcceptConnectionSettings_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 131);
+            this.label3.Location = new System.Drawing.Point(16, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(319, 21);
             this.label3.TabIndex = 15;
@@ -578,32 +749,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 89);
+            this.label2.Location = new System.Drawing.Point(15, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(284, 21);
             this.label2.TabIndex = 14;
             this.label2.Text = "A remote connection port by default:";
-            // 
-            // labStartTimeDefault
-            // 
-            this.labStartTimeDefault.AutoSize = true;
-            this.labStartTimeDefault.Location = new System.Drawing.Point(6, 44);
-            this.labStartTimeDefault.Name = "labStartTimeDefault";
-            this.labStartTimeDefault.Size = new System.Drawing.Size(229, 21);
-            this.labStartTimeDefault.TabIndex = 13;
-            this.labStartTimeDefault.Text = "Start position time by default:";
-            // 
-            // dateTimePickerStartTimeByDefault
-            // 
-            this.dateTimePickerStartTimeByDefault.CustomFormat = "HH:mm:ss";
-            this.dateTimePickerStartTimeByDefault.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePickerStartTimeByDefault.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStartTimeByDefault.Location = new System.Drawing.Point(321, 39);
-            this.dateTimePickerStartTimeByDefault.Name = "dateTimePickerStartTimeByDefault";
-            this.dateTimePickerStartTimeByDefault.ShowUpDown = true;
-            this.dateTimePickerStartTimeByDefault.Size = new System.Drawing.Size(77, 26);
-            this.dateTimePickerStartTimeByDefault.TabIndex = 12;
-            this.dateTimePickerStartTimeByDefault.Value = new System.DateTime(2016, 5, 9, 0, 0, 0, 0);
             // 
             // grBoxTextSettings
             // 
@@ -1277,10 +1427,14 @@
             this.tabMessages.ResumeLayout(false);
             this.grBoxSavedMessages.ResumeLayout(false);
             this.grBoxSavedMessages.PerformLayout();
+            this.tabTimer.ResumeLayout(false);
+            this.grBox.ResumeLayout(false);
+            this.grBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownTimerSize)).EndInit();
             this.tabSettings.ResumeLayout(false);
             this.tabSettings.PerformLayout();
-            this.grBoxOther.ResumeLayout(false);
-            this.grBoxOther.PerformLayout();
+            this.grBoxConnection.ResumeLayout(false);
+            this.grBoxConnection.PerformLayout();
             this.grBoxTextSettings.ResumeLayout(false);
             this.grBoxTextSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownTextSize)).EndInit();
@@ -1351,7 +1505,7 @@
         private System.Windows.Forms.Label lblResultConnection;
         private System.Windows.Forms.GroupBox grBoxSavedMessages;
         private System.Windows.Forms.Button butDeleteMessage;
-        private System.Windows.Forms.GroupBox grBoxOther;
+        private System.Windows.Forms.GroupBox grBoxConnection;
         private System.Windows.Forms.GroupBox grBoxTextSettings;
         private System.Windows.Forms.Label lblTextType;
         private System.Windows.Forms.Label lblTextSize;
@@ -1359,13 +1513,10 @@
         private System.Windows.Forms.Button butTextTypeBold;
         private System.Windows.Forms.Button butTextTypeItalic;
         private System.Windows.Forms.NumericUpDown numUpDownTextSize;
-        private System.Windows.Forms.ComboBox cmbBoxTextFont;
         private System.Windows.Forms.TextBox txtBoxChromecastConnPortByDefault;
         private System.Windows.Forms.TextBox txtBoxRemoteConnPortByDefault;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labStartTimeDefault;
-        private System.Windows.Forms.DateTimePicker dateTimePickerStartTimeByDefault;
         private System.Windows.Forms.Button butResetOtherSettings;
         private System.Windows.Forms.Button butAcceptOtherSettings;
         private System.Windows.Forms.Button butResetTextSettings;
@@ -1391,7 +1542,21 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbBoxListColors;
         private System.Windows.Forms.Label lblTextColor;
-
+        private System.Windows.Forms.TabPage tabTimer;
+        private System.Windows.Forms.GroupBox grBox;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStartTimeByDefault;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labDigitColor;
+        private System.Windows.Forms.Label labDigitSize;
+        private System.Windows.Forms.Label labDigitFont;
+        private System.Windows.Forms.Label labStartTimeDefault;
+        private System.Windows.Forms.ComboBox cmbBoxTimerFont;
+        private System.Windows.Forms.ComboBox cmbBoxTextFont;
+        private System.Windows.Forms.ComboBox cmbBoxListForeColorTimer;
+        private System.Windows.Forms.ComboBox cmbBoxListBackColorTimer;
+        private System.Windows.Forms.NumericUpDown numUpDownTimerSize;
+        private System.Windows.Forms.Button butResetTimerSettings;
+        private System.Windows.Forms.Button butAcceptTimerSettings;
     }
 }
 

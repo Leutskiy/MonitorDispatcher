@@ -1,44 +1,35 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Controls;
-using System.Drawing.Drawing2D;
-using System.Text.RegularExpressions;
+﻿
 
 namespace Sender.View
 {
-    using Sender.Entities;
-    using Sender.EXControls;
-    using Sender.Extensions;
-    using Sender.Win32;
-    using Sender.Helpers;
-    using System.Drawing.Imaging;
-    using Sender.Presenter;
-    using MediaDataSerialization;   
-    using CommonTypes;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
     using System.Linq.Expressions;
     using System.Runtime.Serialization.Formatters.Binary;
     using System.IO;
     using System.Net.Sockets;
     using System.Net;
-    using System.Diagnostics;
+
+    using Entities;
+    using EXControls;
+    using Extensions;
+    using Helpers;
+    using Presenter;
+    using MediaDataSerialization;   
+    using CommonTypes;
+    using HelpfulMethods;
     using WMPLib;
-    using Sender.EventArguments;
-    using Sender.Services;
+    using EventArguments;
 
     using ViewDetails = System.Windows.Forms.View;
     using Timer = MediaDataSerialization.Timer;
-    using System.Globalization;
-    using System.Reflection;
 
     public enum ModeViewSender : byte
     {
@@ -312,11 +303,16 @@ namespace Sender.View
 
             datetimepickerStartValue.Value = dateTimePickerStartTimeByDefault.Value = ConfigurationSettings.StartTimer;
 
+            cmbBoxTimerFont.DataSource = FontFamily.Families.Select(f => f.Name).ToList();
+            cmbBoxTimerFont.SelectedItem = ConfigurationSettings.FontFamilyTimer;
+            cmbBoxTimerFont.DropDownHeight = 150;
+
             txtboxIpAddressRemoteConnByDefault.Text = ConfigurationSettings.IpAddressRemoteMachine.ToString();
             txtBoxRemoteConnPortByDefault.Text      = ConfigurationSettings.RemoteConnectionPort.ToString();
             txtBoxChromecastConnPortByDefault.Text  = ConfigurationSettings.ChromecastConnectionPort.ToString();
 
-            numUpDownTextSize.Value = ConfigurationSettings.SizeText;
+            numUpDownTimerSize.Value = ConfigurationSettings.SizeTimer;
+            numUpDownTextSize.Value  = ConfigurationSettings.SizeText;
 
             cmbBoxTextFont.DataSource     = FontFamily.Families.Select(f => f.Name).ToList();
             cmbBoxTextFont.SelectedItem   = ConfigurationSettings.FontFamilyText;
@@ -368,21 +364,23 @@ namespace Sender.View
 
             //TODO: код можно упростить
 
-            var colors  = Enum.GetValues(typeof(KnownColor));
-            foreach (var knowColor in colors)
+            var dictColors = FormalizationManager.GetDictionaryColors();
+
+            var arrayComboBoxes= new[] { cmbBoxListColors, cmbBoxListForeColorTimer, cmbBoxListBackColorTimer };
+
+            foreach (var cmbBox in arrayComboBoxes)
             {
-                cmbBoxListColors.Items.Add(knowColor);
+                foreach (var knowColor in dictColors.Values)
+                {
+                    cmbBox.Items.Add(knowColor);
+                }
+
+                cmbBox.DropDownHeight = 150;
             }
 
-            var dictColors = new Dictionary<string, KnownColor>();
-
-            foreach (var knowColor in colors)
-            {
-                dictColors[knowColor.ToString()] = (KnownColor)knowColor;
-            }
-
-            cmbBoxListColors.SelectedItem = dictColors[ConfigurationSettings.ForeColorText];
-            cmbBoxListColors.DropDownHeight = 150;
+            cmbBoxListBackColorTimer.SelectedItem = dictColors[ConfigurationSettings.BackColorTimer];
+            cmbBoxListForeColorTimer.SelectedItem = dictColors[ConfigurationSettings.ForeColorTimer];
+            cmbBoxListColors.SelectedItem         = dictColors[ConfigurationSettings.ForeColorText];
 
             #endregion
 
@@ -522,9 +520,9 @@ namespace Sender.View
             lstviewSound.Font = new Font("Times New Roman", 12);
             lstviewSound.HeaderStyle = ColumnHeaderStyle.Nonclickable;
 
-            lstviewSound.Anchor = ((AnchorStyles)((((AnchorStyles.Top | AnchorStyles.Bottom) | AnchorStyles.Left) | AnchorStyles.Right)));
+            lstviewSound.Anchor = (((((AnchorStyles.Top | AnchorStyles.Bottom) | AnchorStyles.Left) | AnchorStyles.Right)));
 
-            lstviewSound.View = System.Windows.Forms.View.Details;
+            lstviewSound.View     = System.Windows.Forms.View.Details;
             lstviewSound.Location = new Point(7, 45);
 
             var commonColumnWidthSoundTrack = 314;
@@ -596,7 +594,7 @@ namespace Sender.View
             lstviewMusic.Font = new Font("Times New Roman", 12);
             lstviewMusic.HeaderStyle = ColumnHeaderStyle.Nonclickable;
 
-            lstviewMusic.Anchor = ((AnchorStyles)((((AnchorStyles.Top | AnchorStyles.Bottom) | AnchorStyles.Left) | AnchorStyles.Right)));
+            lstviewMusic.Anchor = (((((AnchorStyles.Top | AnchorStyles.Bottom) | AnchorStyles.Left) | AnchorStyles.Right)));
 
             lstviewMusic.View = System.Windows.Forms.View.Details;
             lstviewMusic.Location = new Point(7, 45);
@@ -680,8 +678,6 @@ namespace Sender.View
 
             cmbBoxMonitorNumber.DataSource    = Presenter.OnLoadGetMonitors(sender, e);
             cmbBoxMonitorNumber.SelectedIndex = Presenter.OnLoadGetPrimaryMonitor(sender, e);
-
-
         }
 
         void lstviewMessage_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -2467,6 +2463,7 @@ namespace Sender.View
             listView.Columns[countColumns - 1].Width = -2;
         }
 
+        // TODO:: Сделать отправку сброса всех настроек ресивера (но всех ли надо?)
         private void SenderView_FormClosing(object sender, FormClosingEventArgs e)
         {
             var listImages      = lstviewImage.Images;
@@ -2580,17 +2577,9 @@ namespace Sender.View
             }
         }
 
-        private void butAcceptOtherSettings_Click(object sender, EventArgs e)
+        private void butAcceptConnectionSettings_Click(object sender, EventArgs e)
         {
-            if (CurrentTimerStatus == TimerStatus.Play || CurrentTimerStatus == TimerStatus.Pause)
-            {
-                MessageBox.Show("Please, try again after the timer will be stopped!");
-                return;
-            }
-
-            ConfigurationSettings.StartTimer = datetimepickerStartValue.Value = dateTimePickerStartTimeByDefault.Value;
-
-            #region Валидация введенных данных в блок Other Settings
+            #region Валидация введенных данных в блок Connection Settings
 
             IPAddress remoteConnectionIPAddress;
 
@@ -2671,16 +2660,14 @@ namespace Sender.View
 
         private void butResetOtherSettings_Click(object sender, EventArgs e)
         {
-            ConfigurationSettings.StartTimer               = new DateTime(2000, 1, 1, 1, 0, 0, 0); // TODO: Create a datetime value by default (Rework)
             ConfigurationSettings.RemoteConnectionPort     = _portReceiver;
             ConfigurationSettings.ChromecastConnectionPort = _portChromecast;
 
             // TODO: Get an IP address from a configuration file
-            txtBoxPort.Text          = ConfigurationSettings.RemoteConnectionPort.ToString();
-            txtBoxIP.Text            = ConfigurationSettings.IpAddressRemoteMachine.ToString();
+            txtBoxPort.Text                         = ConfigurationSettings.RemoteConnectionPort.ToString();
+            txtBoxIP.Text                           = ConfigurationSettings.IpAddressRemoteMachine.ToString();
             txtboxIpAddressRemoteConnByDefault.Text = txtBoxIP.Text;
 
-            dateTimePickerStartTimeByDefault.Value = ConfigurationSettings.StartTimer;
             txtBoxRemoteConnPortByDefault.Text     = ConfigurationSettings.RemoteConnectionPort.ToString();
             txtBoxChromecastConnPortByDefault.Text = ConfigurationSettings.ChromecastConnectionPort.ToString();
         }
@@ -2884,7 +2871,7 @@ namespace Sender.View
            
             SetUpTimerToOriginalState();
 
-            butAcceptOtherSettings_Click(obj, eventArgs);
+            butAcceptConnectionSettings_Click(obj, eventArgs);
 
             var mediaDataTypes = new[] { MediaDataType.Video, MediaDataType.Music, MediaDataType.Sound };
 
@@ -2925,12 +2912,82 @@ namespace Sender.View
 
         private void tabsOther_Selected(object sender, TabControlEventArgs e)
         {
-            var tabControl =  sender as System.Windows.Forms.TabControl;
+            var tabControl = sender as System.Windows.Forms.TabControl;
 
             foreach (Control control in tabControl.Controls)
             {
                 control.Refresh();
             }
+        }
+
+        private void butAcceptTimerSettings_Click(object sender, EventArgs e)
+        {
+            if (CurrentTimerStatus == TimerStatus.Play || CurrentTimerStatus == TimerStatus.Pause)
+            {
+                MessageBox.Show("Please, try again after the timer will be stopped!");
+                return;
+            }
+
+            ConfigurationSettings.StartTimer = datetimepickerStartValue.Value = dateTimePickerStartTimeByDefault.Value;
+
+            ConfigurationSettings.FontFamilyTimer = cmbBoxTimerFont.SelectedItem.ToString();
+            ConfigurationSettings.SizeTimer       = (int)numUpDownTimerSize.Value;
+            ConfigurationSettings.BackColorTimer  = cmbBoxListBackColorTimer.SelectedItem.ToString();
+            ConfigurationSettings.ForeColorTimer  = cmbBoxListForeColorTimer.SelectedItem.ToString();
+
+            switch (CurrentModeViewSender)
+            {
+                case ModeViewSender.MonitorFullScreen:  // Fullscreen Mode
+                    {
+                        Presenter.OnButtonAcceptSettingsTimerLocalReceiver();
+                    }
+                    break;
+                case ModeViewSender.RemoteScreen:       // Remote Mode
+                    {
+                        if (_isConnectedToReciver)
+                        {
+                            Connect();
+                            Presenter.OnButtonAccept(sender, e);
+                        }
+                    }
+                    break;
+                case ModeViewSender.Chromecast:         // Chromecast Mode
+                    {
+                        // some code
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void butResetTimerSettings_Click(object sender, EventArgs e)
+        {
+            // TODO: Create a datetime value by default (Rework)
+            ConfigurationSettings.StartTimer = new DateTime(2000, 1, 1, 1, 0, 0, 0);
+
+            dateTimePickerStartTimeByDefault.Value = ConfigurationSettings.StartTimer;
+
+            // TODO: сделать через конструктор
+            ConfigurationSettings.FontFamilyTimer = @"Arial";
+            ConfigurationSettings.SizeTimer       = 48;
+            ConfigurationSettings.BackColorTimer  = "Black";
+            ConfigurationSettings.ForeColorTimer  = "White";
+
+            numUpDownTimerSize.Value = ConfigurationSettings.SizeTimer;
+
+            var colors = Enum.GetValues(typeof(KnownColor));
+            var dictColors = new Dictionary<string, KnownColor>();
+
+            foreach (var knowColor in colors)
+            {
+                dictColors[knowColor.ToString()] = (KnownColor)knowColor;
+            }
+
+            cmbBoxListBackColorTimer.SelectedItem = dictColors[ConfigurationSettings.BackColorTimer];
+            cmbBoxListForeColorTimer.SelectedItem = dictColors[ConfigurationSettings.ForeColorTimer];
+
+            cmbBoxTimerFont.SelectedItem = ConfigurationSettings.FontFamilyTimer;
         }
 
         //private void txtboxIpAddressRemoteConnByDefault_KeyPress(object sender, KeyPressEventArgs e)

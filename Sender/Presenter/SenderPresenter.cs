@@ -176,12 +176,11 @@ namespace Sender.Presenter
         {
             foreach (var formReciver in _listRecieverView)
             {
-                
                 var pictureBox = formReciver.Controls.Find("picboxRecievedImage", false).FirstOrDefault() as PictureBox;
                 if (pictureBox != null)
                 {
                     
-                    var timer = pictureBox.Controls.Find("simpleTimerReciver", false).FirstOrDefault() as ExtControlLibrary.SimpleTimer;
+                    var timer = pictureBox.Controls.Find("simpleTimerReciver", false).FirstOrDefault() as ExtControlLibrary.TimerWithDigitalLabels;
                     if (timer != null)
                     {
                         timer.SetTime(_viewSender.TimerSettings.Timer.ToString());
@@ -458,7 +457,7 @@ namespace Sender.Presenter
         {
             _listRecieverView.Clear();
 
-            RecieverView.settingsMessageWindow = _viewSender.ConfigurationSettings;
+            RecieverView.SettingsMessageWindow = _viewSender.ConfigurationSettings;
 
             var formRecieverView = new RecieverView(true);
 
@@ -610,6 +609,18 @@ namespace Sender.Presenter
                     pictureBoxForBgImage.BackgroundImage = null;
                     pictureBoxForBgImage.BackColor       = Color.DarkRed;
                 }
+            }
+        }
+
+        public void OnButtonAcceptSettingsTimerLocalReceiver()
+        {
+            RecieverView.SettingsMessageWindow = _viewSender.ConfigurationSettings;
+
+            var receiver = (RecieverView)_listRecieverView.FirstOrDefault();
+
+            if (receiver != null)
+            {
+                receiver.SetSettingsForTimer();
             }
         }
     }

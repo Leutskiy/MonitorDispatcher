@@ -75,3 +75,5 @@ C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.csprojResolveAssemblyRef
 C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.View.ViewSender.resources
 C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.Properties.Resources.resources
 C:\Workspaces\MonitorDispatcher\Sender\obj\Debug\Sender.csproj.GenerateResource.Cache
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\ExtControlLibrary.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Debug\ExtControlLibrary.pdb

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -32,7 +28,7 @@ namespace Reciever
 {
     public partial class RecieverView : Form
     {
-        public static Settings settingsMessageWindow { get; set; }
+        public static Settings SettingsMessageWindow { get; set; }
 
         public List<Form> _childrenListForms;
 
@@ -90,7 +86,7 @@ namespace Reciever
 
         static RecieverView()
         {
-            settingsMessageWindow = new Settings();  // TODO: Rework this snippet code
+            SettingsMessageWindow = new Settings();  // TODO: Rework this snippet code
 
             localHostName = GetLocalIPAddress();
         }
@@ -147,6 +143,19 @@ namespace Reciever
 
             // TODO: Rework
             throw new Exception("Local IP Address Not Found!");
+        }
+
+        public void SetSettingsForTimer()
+        {
+            // TODO: сделать глобальным
+            var dictColors = FormalizationManager.GetDictionaryColors();
+
+            simpleTimerReciver.FontTimer = SettingsMessageWindow.GetFontForTimer();
+            simpleTimerReciver.BackColorDigitTimer = Color.FromKnownColor(dictColors[SettingsMessageWindow.BackColorTimer]);
+            simpleTimerReciver.ForeColorDigitTimer = Color.FromKnownColor(dictColors[SettingsMessageWindow.ForeColorTimer]);
+
+            // сообщаем таймеру о том, что он должен себя перерисовать
+            simpleTimerReciver.Refresh();
         }
 
         private void soundPlayer_PlayStateChange(int newState)
@@ -256,14 +265,16 @@ namespace Reciever
 
                     var data = formatter.Deserialize(readerStream);
 
-
                     // Rewrite this code
 
                     var settings = data as Settings;
 
                     if (settings != null)
                     {
-                        RecieverView.settingsMessageWindow = settings;
+                        SettingsMessageWindow = settings;
+
+                        SetSettingsForTimer();
+
                         continue;
                     }
 
@@ -952,7 +963,7 @@ namespace Reciever
             var image    = data.image;
             var text     = data.text;
 
-            var formMessageShow = new MessageWindowForm(text, settingsMessageWindow);
+            var formMessageShow = new MessageWindowForm(text, SettingsMessageWindow);
             reciever._childrenListForms.Add(formMessageShow);
 
             if (image != null)
@@ -1004,15 +1015,15 @@ namespace Reciever
         private void RecieverView_Resize(object sender, EventArgs e)
         {
             simpleTimerReciver.Location = new Point(this.Width / 2 - simpleTimerReciver.Width / 2);
-            this.Refresh();
+            Refresh();
         }
 
         private void picboxRecievedImage_Paint(object sender, PaintEventArgs e)
         {
             if (Message != null)
             {
-                var brush = (Brush)new SolidBrush(Color.FromName(settingsMessageWindow.ForeColorText));
-                TextManager.DrawTextInForm(Message, settingsMessageWindow.GetFontForMessage(), brush, e);
+                var brush = (Brush)new SolidBrush(Color.FromName(SettingsMessageWindow.ForeColorText));
+                TextManager.DrawTextInForm(Message, SettingsMessageWindow.GetFontForMessage(), brush, e);
             }
         }
 

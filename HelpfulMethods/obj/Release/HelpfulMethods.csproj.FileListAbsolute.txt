@@ -2,3 +2,7 @@ C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\HelpfulMethods\bin\Release\HelpfulMethods.pdb
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\HelpfulMethods\obj\Release\HelpfulMethods.dll
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\HelpfulMethods\obj\Release\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\bin\Release\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\bin\Release\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\obj\Release\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\HelpfulMethods\obj\Release\HelpfulMethods.pdb

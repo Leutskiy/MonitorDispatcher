@@ -262,10 +262,10 @@ namespace Sender.Model
 
             BinaryFormatter formatter = new BinaryFormatter();
 
+
             // Собираем данные с элементов управления для отправки через объект
             var dataSend = new Settings();
 
-            Byte[] bytes;
             switch (command)
             {
                 case Command.Settings:
@@ -276,14 +276,12 @@ namespace Sender.Model
             // Подключаем транспортный поток для отправки
             writerStream = client.GetStream();
 
-
             // Сериализуем объект в транспортный поток и отправляем 
+            formatter.Serialize(writerStream, dataSend);                    // Отправленный объект
 
-            formatter.Serialize(writerStream, dataSend);        // Отправленный объект
 
-
-            writerStream.Close();                               // Освобождаем поток
-            client.Close();                                     // Освобождаем сокет клиента
+            writerStream.Close();                                           // Освобождаем поток
+            client.Close();                                                 // Освобождаем сокет клиента
         }
 
         public void SendBackgroundImage(string imageFileName, Command command)

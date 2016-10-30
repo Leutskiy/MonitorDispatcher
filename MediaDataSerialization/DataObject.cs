@@ -237,27 +237,27 @@ namespace MediaDataSerialization
             set { command = value; }
         }
         // Строковый тип
-        public String DisplayCommand
+        public string DisplayCommand
         {
             get { return displayCommand; }
             set { displayCommand = value; }
         }
-        public String Text
+        public string Text
         {
             get { return text; }
             set { text = value; }
         }
-        public String LogName
+        public string LogName
         {
             get { return logName; }
             set { logName = value; }
         }
-        public String ImageName
+        public string ImageName
         {
             get { return imageName; }
             set { imageName = value; }
         }
-        public String MediaDataName
+        public string MediaDataName
         {
             get { return mediaDataName; }
             set { mediaDataName = value; }

@@ -25,3 +25,30 @@ C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\Sender\bin\Release\AxInterop.WMPLib.dll
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\Sender\bin\Release\HelpfulMethods.pdb
 C:\Users\Леуцкий\Documents\Visual Studio 2012\Projects\MonitorDispatcher\Sender\bin\Release\ExtControlLibrary.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\Sender.exe.config
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.csproj.ResolveComReference.cache
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.exe
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\Sender.exe
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\Sender.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\CommonTypes.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\ExtControlLibrary.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\HelpfulMethods.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\MediaDataSerialization.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\Reciever.exe
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\System.Windows.Controls.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\Interop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\AxInterop.WMPLib.dll
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\MessageWindow.exe
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\CommonTypes.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\HelpfulMethods.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\MediaDataSerialization.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\Reciever.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\ExtControlLibrary.pdb
+C:\Workspaces\MonitorDispatcher\Sender\bin\Release\MessageWindow.pdb
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.csprojResolveAssemblyReference.cache
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.View.ViewSender.resources
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.Properties.Resources.resources
+C:\Workspaces\MonitorDispatcher\Sender\obj\Release\Sender.csproj.GenerateResource.Cache
